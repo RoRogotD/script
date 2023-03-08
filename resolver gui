@@ -1,0 +1,69 @@
+-- DO NOT CHANGE ANYTHING HERE
+-- Thanks for using the script :3
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/6ity/PareXV/main/UI-LIB.lua", true))()
+
+
+local main = library:Load({Name = "🌎 RoX", Theme = "Dark", SizeX = 440, SizeY = 480, ColorOverrides = {}})
+local aimbot = main:Tab("Main")
+local section = aimbot:Section({Name = "", column = 1})
+
+-- object:Hide()
+-- object:Show()
+
+local label = section:Label("Scripts")
+
+local button = section:Button({Name = "🌙  Lock", Callback = function()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/6ity/PareXV/main/PareX%20V1.lua"))()
+end})
+local button = section:Button({Name = "🌙  Hood Customs Lock", Callback = function()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/6ity/PareXV/main/HoodCustoms.lua"))()
+end})
+local button = section:Button({Name = "🌙  Anti Lock", Callback = function()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/6ity/PareXV/main/PareX%20Anti.lua"))()
+end})
+local button = section:Button({Name = "🌙  Resolver", Callback = function()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/6ity/PareXV/main/PareX%20resolver.lua"))()
+end})
+local button = section:Button({Name = "🌙  Aim Viewer", Callback = function()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/6ity/PareXV/main/AimViewer"))()
+end})
+
+local http_request = syn and syn.request or request;
+local hwidPaste - loadstring(game: HttpGet("pastbinlink"))()
+local body - http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body; 
+local decoded game:GetService("HttpService"): JSONDecode(body)
+local hwid = decoded.headers['Syn-Fingerprint']
+
+for i, v in pairs(hwidPaste) do
+    if v == hwid then 
+        game.StarterGui:SetCore("SendNotification", {
+                    Title = "Whitelisted";
+                    Text = "Script has been successfully loaded!",
+                    Icon = "http://www.roblox.com/asset/?id=8709610734",
+                    Duration = 3
+                })
+    else
+        game.StarterGui:SetCore("SendNotification", {
+                    Title = "Not Whitelisted";
+                    Text = "your hwid has been copied please message RoRo got D#7597 to fully buy!",
+                    Icon = "http://www.roblox.com/asset/?id=8709610734",
+                    Duration = 3
+                })
+    end
+end
+setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
+
+game.StarterGui:SetCore("SendNotification", {
+                    Title = "❓";
+                    Text = "GUI loaded!",
+                    Icon = "http://www.roblox.com/asset/?id=8709610734",
+                    Duration = 3
+                })
+
+game.StarterGui:SetCore("SendNotification", {
+                    Title = "✅ Loaded";
+                    Text = "Scripts loaded!",
+                    Icon = "http://www.roblox.com/asset/?id=8709610734",
+                    Duration = 3
+                })
