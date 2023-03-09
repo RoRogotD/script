@@ -52,7 +52,7 @@ for i, v in pairs(hwidPaste) do
                 })
     end
 end
-setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
+print(game:GetService("RbxAnalyticsService"):GetClientId())
 
 game.StarterGui:SetCore("SendNotification", {
                     Title = "❓";
